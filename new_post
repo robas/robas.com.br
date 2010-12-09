@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if [ $# -eq 0 ]
+  then
+    echo "Usage: ./new_post <My Title>"
+    exit 1
+  fi
+
+path="public_html/content/"
+title=`echo $* | sed 's/ /-/g'`
+file_name=`date +%y%m%d%H%M%S`.$title
+
+touch $path$file_name
+vi $path$file_name

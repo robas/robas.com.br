@@ -1,0 +1,14 @@
+# Backup
+
+O backup gerado pelo mysqldump resulta em um arquivo .sql com as queries necessáras para criar as tabelas e populá-las.
+
+Na linha de comando:
+>mysqldump -u <usuario> <database> -p > <arquivo.sql>
+
+É possível também especificar a flag *--add-drop-table*, que inclui automaticamente diretivas *drop tables* antes de cada *create*;
+
+# Restore
+
+Se o backup gerado não passa de um .sql, o restore não é nada mais do que a execução deste .sql, replicando o ambiente onde foi feito o backup:
+
+>mysql -u <usuario> <database> -p < <arquivo.sql>

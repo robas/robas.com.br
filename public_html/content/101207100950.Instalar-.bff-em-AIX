@@ -1,0 +1,10 @@
+# Instalar .bff em AIX
+
+Para listar o conteúdo de um .bff:
+> installp -L -d [arquivo bff]
+
+Para instalar um módulo específico, dentro do bff:
+> installp -aX -d [arquivo bff] [módulo que consta no bff]
+
+Para instalar todos os módulos do bff:
+> installp -aX -d [arquivo bff] all
